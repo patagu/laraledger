@@ -1,0 +1,20 @@
+models:
+  BookEntry:
+    id: uuid
+    date: datetime
+    debit: decimal:15,2
+    credit: decimal:15,2
+    account_id: unsignedInteger
+    status: string
+    timestamps
+    relationships:
+      belongsTo: Account
+  Account:
+    name: string
+    description: string
+    nature: enum:assets,liability,networth
+    relationships:
+      hasMany: BookEntry
+
+controllers:
+  # ...

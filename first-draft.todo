@@ -1,0 +1,8 @@
+# First draft todo-list for laraledger
+
+☐ tweak database config to switch to sqlite default
+☐ install blueprint package
+☐ define first models and test run
+☐ get clear on how to model tree-relationship in accounts
+    * see this: https://medium.com/@miladev95/using-parent-child-recursive-relationships-in-laravel-2124b8885719
+☐ implement parent-child relationships in account model
