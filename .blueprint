@@ -1,2 +1,11 @@
+created:
+    - database/factories/BookEntryFactory.php
+    - database/factories/AccountFactory.php
+    - database/migrations/2024_03_26_200828_create_book_entries_table.php
+    - database/migrations/2024_03_26_200829_create_accounts_table.php
+    - app/Models/BookEntry.php
+    - app/Models/Account.php
 models:
     User: {  }
+    BookEntry: { id: uuid, date: datetime, debit: 'decimal:15,2', credit: 'decimal:15,2', account_id: unsignedInteger, status: string, timestamps: timestamps, relationships: { belongsTo: Account } }
+    Account: { name: string, code: unsignedInteger, description: string, nature: 'enum:assets,liability,networth', timestamps: timestamps, relationships: { hasMany: BookEntryq } }

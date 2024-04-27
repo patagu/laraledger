@@ -6,15 +6,18 @@ models:
     credit: decimal:15,2
     account_id: unsignedInteger
     status: string
-    timestamps
+    timestamps: true
     relationships:
       belongsTo: Account
   Account:
+
     name: string
+    code: unsignedInteger
     description: string
     nature: enum:assets,liability,networth
+    timestamps: true
     relationships:
-      hasMany: BookEntry
+      hasMany: BookEntryq
 
 controllers:
   # ...
